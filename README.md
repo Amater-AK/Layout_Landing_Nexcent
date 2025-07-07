@@ -7,4 +7,5 @@
 ## Использовалось
 
 -   Vite;
--   Sass.
+-   Sass;
+-   Swiper.
