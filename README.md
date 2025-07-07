@@ -9,3 +9,7 @@
 -   Vite;
 -   Sass;
 -   Swiper.
+
+## vite.config.js
+
+Изменёно значение "base" для GitHub Pages.

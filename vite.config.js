@@ -9,6 +9,7 @@ export default defineConfig({
     //         mangle: false,
     //     },
     // },
+    base: "/Layout_Landing_Nexcent/",
     resolve: {
         alias: {
             "@": path.resolve(__dirname, "./src"),
