@@ -1,0 +1,67 @@
+@use "sass:map";
+@use "breakpoints" as *;
+
+// Breakpoints media
+@mixin media($breakpoint, $type: min) {
+    $value: map.get($breakpoints, $breakpoint);
+
+    @if $value == null {
+        @error "Breakpoint '#{$breakpoint}' not found.";
+    }
+
+    @media (#{$type}-width: $value) {
+        @content;
+    }
+}
+
+@mixin media-between($min-breakpoint, $max-breakpoint) {
+    $min-value: map.get($breakpoints, $min-breakpoint);
+    $max-value: map.get($breakpoints, $max-breakpoint);
+
+    @if $min-value == null {
+        @error "Min breakpoint '#{$min-breakpoint}' not found.";
+    }
+
+    @if $max-value == null {
+        @error "Max breakpoint '#{$max-breakpoint}' not found.";
+    }
+
+    @media (min-width: $min-value) and (max-width: $max-value) {
+        @content;
+    }
+}
+
+// Hover/Active media
+@mixin onhover {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (hover: none) {
+        &:active {
+            @content;
+        }
+    }
+}
+
+@mixin onhover-btn {
+    @media (hover: hover) {
+        &:hover:not(:disabled) {
+            @content;
+        }
+    }
+
+    @media (hover: none) {
+        &:active:not(:disabled) {
+            @content;
+        }
+    }
+}
+
+@mixin ishover {
+    @media (hover: hover) {
+        @content;
+    }
+}

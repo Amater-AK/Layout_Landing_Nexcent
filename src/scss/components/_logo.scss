@@ -1,0 +1,9 @@
+.logo {
+    inline-size: 15.5rem;
+    block-size: 2.4rem;
+    flex-shrink: 0;
+
+    &__link {
+        display: inline-block;
+    }
+}

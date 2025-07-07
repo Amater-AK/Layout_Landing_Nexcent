@@ -1,0 +1,28 @@
+@use "@/scss/abstracts/media-queries" as *;
+@use "@/scss/abstracts/typography" as *;
+
+.menu-primary {
+    display: none;
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+
+    &__link {
+        display: inline-block;
+        padding-block: 0.4rem;
+        @include font-body-2-regular;
+        color: var(--color-neutral-d_gray);
+        transition-duration: var(--transition-duration);
+
+        @include onhover {
+            color: var(--color-brand-primary);
+        }
+    }
+
+    @include media(lg) {
+        display: block;
+    }
+}

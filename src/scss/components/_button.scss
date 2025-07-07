@@ -1,0 +1,54 @@
+@use "@/scss/abstracts/media-queries" as *;
+@use "@/scss/abstracts/typography" as *;
+
+.button {
+    --_padding-inline: 3.2rem;
+    --_padding-block: 1.4rem;
+
+    display: inline-flex;
+	justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    padding: var(--_padding-block) var(--_padding-inline);
+    @include font-body-2-medium;
+	white-space: nowrap;
+    color: var(--color-neutral-white);
+    background-color: var(--color-brand-primary);
+    border-radius: var(--radius-sm);
+    transition-duration: var(--transition-duration);
+
+    &:focus-visible {
+        outline-color: var(--color-neutral-d_gray);
+    }
+
+    &:disabled {
+        color: var(--color-neutral-gray_blue);
+        background-color: var(--color-neutral-silver);
+        cursor: not-allowed;
+    }
+
+    @include onhover-btn {
+        background-color: var(--color-shade-2);
+    }
+
+    &--small {
+        --_padding-inline: 2rem;
+        --_padding-block: 1rem;
+        @include font-body-3-medium;
+    }
+
+    &--invert {
+        color: var(--color-brand-primary);
+        background-color: var(--color-neutral-white);
+
+        @include onhover-btn {
+            background-color: var(--color-tint-5);
+        }
+    }
+
+    &--icon {
+        --icon-size: 2rem;
+
+        padding: var(--_padding-block);
+    }
+}

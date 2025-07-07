@@ -1,0 +1,32 @@
+:root {
+    --color-neutral-black: #263238;
+    --color-neutral-d_gray: #4d4d4d;
+    --color-neutral-gray: #717171;
+    --color-neutral-l_gray: #89939e;
+    --color-neutral-gray_blue: #abbed1;
+    --color-neutral-silver: #f5f7fa;
+    --color-neutral-white: #ffffff;
+    --color-neutral-white-200: rgb(from var(--color-neutral-white) r g b / 0.2);
+
+    --color-brand-primary: #4caf4f;
+    --color-brand-secondary: #263238;
+
+    --color-shade-2: #388e3b;
+    --color-shade-5: #103e13;
+
+    --color-tint-4: #c8e6c9;
+    --color-tint-5: #e8f5e9;
+
+    --radius-xs: 0.2rem;
+    --radius-sm: 0.4rem;
+    --radius-md: 0.6rem;
+    --radius-lg: 0.8rem;
+    --radius-full: 100vw;
+
+    --shadow-sm: 2px 2px 6px rgb(from var(--color-neutral-gray_blue) r g b / 0.4);
+    --shadow-lg: 4px 4px 8px rgb(from var(--color-neutral-gray_blue) r g b / 0.4);
+
+    --icon-size: 2.4rem;
+
+    --transition-duration: 300ms;
+}

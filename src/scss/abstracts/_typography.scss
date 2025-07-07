@@ -1,0 +1,97 @@
+@use "variables" as *;
+@use "functions" as *;
+
+$min-width: strip-units($content-min-width);
+$max-width: strip-units($content-max-width);
+
+@mixin font-family {
+    font-family: "Inter", sans-serif;
+}
+
+// Headlines
+@mixin font-headline-1 {
+    @include font-family;
+    font-size: fluid(3.6, 6.4, $min-width, $max-width);
+    font-weight: 600;
+    line-height: 1.1875;
+}
+
+@mixin font-headline-2 {
+    @include font-family;
+    font-size: fluid(2.8, 3.6, $min-width, $max-width);
+    font-weight: 600;
+    line-height: 1.2222;
+}
+
+@mixin font-headline-3 {
+    @include font-family;
+    font-size: fluid(2, 2.8, $min-width, $max-width);
+    font-weight: 600;
+    line-height: 1.2857;
+}
+
+@mixin font-headline-4 {
+    @include font-family;
+    font-size: fluid(2, 2, $min-width, $max-width);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+// Body
+// Regular
+@mixin font-body-1-regular {
+    @include font-family;
+    font-size: fluid(1.6, 1.8, $min-width, $max-width);
+    font-weight: 400;
+    line-height: 1.5555;
+}
+
+@mixin font-body-2-regular {
+    @include font-family;
+    font-size: fluid(1.4, 1.6, $min-width, $max-width);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+@mixin font-body-3-regular {
+    @include font-family;
+    font-size: fluid(1.2, 1.4, $min-width, $max-width);
+    font-weight: 400;
+    line-height: 1.4285;
+}
+
+@mixin font-body-4-regular {
+    @include font-family;
+    font-size: fluid(1.2, 1.2, $min-width, $max-width);
+    font-weight: 400;
+    line-height: 1.3333;
+}
+
+// Medium
+@mixin font-body-1-medium {
+    @include font-family;
+    font-size: fluid(1.6, 1.8, $min-width, $max-width);
+    font-weight: 500;
+    line-height: 1.5555;
+}
+
+@mixin font-body-2-medium {
+    @include font-family;
+    font-size: fluid(1.4, 1.6, $min-width, $max-width);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+@mixin font-body-3-medium {
+    @include font-family;
+    font-size: fluid(1.2, 1.4, $min-width, $max-width);
+    font-weight: 500;
+    line-height: 1.4285;
+}
+
+@mixin font-body-4-medium {
+    @include font-family;
+    font-size: fluid(1.2, 1.2, $min-width, $max-width);
+    font-weight: 500;
+    line-height: 1.3333;
+}

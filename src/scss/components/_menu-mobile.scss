@@ -1,0 +1,45 @@
+@use "@/scss/abstracts/media-queries" as *;
+@use "@/scss/abstracts/typography" as *;
+
+.menu-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    inline-size: 100%;
+    block-size: calc(100svh - 100%);
+    padding: 4rem;
+    background-color: var(--color-neutral-silver);
+    border-block-start: 1px solid var(--color-brand-primary);
+    transform: translateX(100%);
+    transition-property: transform;
+    transition-duration: var(--transition-duration);
+
+    &[data-menu-mobile-active] {
+        transform: translateX(0);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-block-end: 4rem;
+    }
+
+    &__link {
+        display: inline-block;
+        padding-block: 0.4rem;
+        @include font-body-1-regular;
+        color: var(--color-neutral-d_gray);
+        transition-duration: var(--transition-duration);
+
+        @include onhover {
+            color: var(--color-brand-primary);
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+    }
+}

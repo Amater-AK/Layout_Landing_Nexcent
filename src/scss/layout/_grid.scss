@@ -1,0 +1,52 @@
+@use "@/scss/abstracts/breakpoints" as *;
+@use "@/scss/abstracts/media-queries" as *;
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2.4rem;
+}
+
+// gap-*
+// @for $i from 1 through 10 {
+//     $value: $i * 5;
+//     .gap-#{$value} {
+//         gap: $value;
+//     }
+// }
+
+// col-*
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        grid-column: span $i;
+    }
+}
+
+// offset-*
+// @for $i from 1 through 11 {
+//     .offset-#{$i} {
+//         grid-column-start: $i + 1;
+//     }
+// }
+
+// col-*breakpoint*-*
+@each $key, $value in $breakpoints {
+    @include media($key) {
+        @for $i from 1 through 12 {
+            .col-#{$key}-#{$i} {
+                grid-column: span $i;
+            }
+        }
+    }
+}
+
+// offset-*breakpoint*-*
+// @each $key, $value in $breakpoints {
+//     @include media($key) {
+//         @for $i from 1 through 11 {
+//             .offset-#{$key}-#{$i} {
+//                 grid-column-start: $i + 1;
+//             }
+//         }
+//     }
+// }

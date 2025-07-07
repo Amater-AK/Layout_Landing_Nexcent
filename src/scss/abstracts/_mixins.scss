@@ -1,0 +1,5 @@
+@mixin onfocus($type: focus-visible) {
+    &:#{$type} {
+        @content;
+    }
+}

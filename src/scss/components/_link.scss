@@ -1,0 +1,16 @@
+@use "@/scss/abstracts/typography" as *;
+@use "@/scss/abstracts/media-queries" as *;
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    @include font-headline-4;
+    color: var(--color-brand-primary);
+    transition-duration: var(--transition-duration);
+
+    @include onhover {
+        text-decoration: underline;
+        color: var(--color-shade-2);
+    }
+}

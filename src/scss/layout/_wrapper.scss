@@ -1,0 +1,6 @@
+@use "@/scss/abstracts/variables" as *;
+
+.wrapper {
+    inline-size: min($content-max-width, 100% - 2 * $content-offset);
+    margin-inline: auto;
+}
